@@ -1,0 +1,90 @@
+.section {
+  &__offer {
+    padding: 125px 0px 42px 0px;
+    @include lg {
+      padding: 80px 0px 42px 0px;
+    }
+    @include sm {
+      padding: 35px 0px 35px 0px;
+    }
+  }
+}
+.offer {
+  &__content {
+    &:not(:last-child) {
+      margin-bottom: 110px;
+      @include lg {
+        margin-bottom: 80px;
+      }
+      @include md {
+        margin-bottom: 50px;
+      }
+      @include sm {
+        margin-bottom: 35px;
+      }
+    }
+  }
+
+  &__body {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 36px;
+    @include lg {
+      gap: 15px;
+    }
+    @include md {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include sm {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  &__item {
+    padding: 40px;
+    box-shadow: 0px 0px 8px rgba(22, 23, 72, 0.07),
+      0px 25px 35px rgba(22, 23, 72, 0.05);
+    border-radius: 8px;
+    @include lg {
+      padding: 15px;
+    }
+  }
+
+  &__info {
+    &:not(:last-child) {
+      margin-bottom: 32px;
+      @include lg {
+        margin-bottom: 25px;
+      }
+    }
+  }
+
+  &__subtitle {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 169%;
+    color: $secondary;
+  }
+
+  .text {
+    &__title {
+      @include sm {
+        font-size: 41px;
+      }
+    }
+  }
+  .info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    @include sm {
+      justify-content: center;
+    }
+    &__title {
+      font-size: 28px;
+      line-height: 111%;
+      color: #3a3a3c;
+    }
+  }
+}

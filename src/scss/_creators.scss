@@ -1,0 +1,151 @@
+.section {
+  &__creators {
+    background: linear-gradient(
+      268.52deg,
+      #e3e7f6 -52.27%,
+      rgba(227, 231, 246, 0) 138.23%
+    );
+    &.creators-about {
+      background: none;
+    }
+  }
+}
+.creators {
+  &__body {
+    padding: 73px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &.creators__body-products {
+      padding: 100px 0px 0px 0px;
+      @include lg {
+        padding: 70px 0px;
+      }
+      @include sm {
+        padding: 25px 0px;
+      }
+    }
+    &.creators2__body-products {
+      flex-direction: row-reverse;
+      padding: 100px 0px 52px 0px;
+      @include lg {
+        padding: 70px 0 35px 0;
+      }
+      @include sm {
+        padding: 25px 0 25px 0;
+      }
+    }
+    &.body-about {
+      padding: 50px 0px 95px 0px;
+      @include lg {
+        padding: 0px 0 25px 0;
+      }
+    }
+    &.body-about-2 {
+      padding: 150px 0px 162px 0px;
+      flex-direction: row-reverse;
+      @include lg {
+        padding: 70px 0 35px 0;
+      }
+      @include sm {
+        padding: 0px 0 25px 0;
+      }
+    }
+    @include lg {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    @include sm {
+      padding: 25px 0px;
+    }
+  }
+
+  &__content {
+    flex: 0 1 50%;
+    max-width: 410px;
+    @include lg {
+      flex: 1 1 100%;
+      max-width: unset;
+    }
+    &:not(:last-child) {
+      @include lg {
+        margin-bottom: 20px;
+      }
+    }
+  }
+  &__button {
+    position: relative;
+    display: inline-flex;
+    margin-top: 30px;
+    &.creators__button-about {
+      @include lg {
+        margin-bottom: 50px;
+      }
+      @include xs {
+        margin-bottom: 0px;
+      }
+    }
+    .creators__logo {
+      position: absolute;
+      right: -80%;
+      bottom: -140%;
+      @include xs {
+        display: none;
+      }
+    }
+    @include xs {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+
+  &__image {
+    margin-right: -33px;
+    @media (max-width: 1200px) {
+      margin-right: 0px;
+    }
+    img {
+      @include lg {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  .text {
+    text-align: unset;
+    @include lg {
+      text-align: center;
+    }
+    &__icon {
+      &:not(:last-child) {
+        margin-bottom: 32px;
+      }
+    }
+    &__title {
+      @include sm {
+        line-height: 100%;
+        font-size: 41px;
+      }
+    }
+    .text__subtitle-products,
+    .text__subtitle-about {
+      max-width: 400px;
+      &:first-of-type {
+        margin-bottom: 40px;
+        @include sm {
+          margin-bottom: 20px;
+        }
+      }
+      @include lg {
+        max-width: 100%;
+      }
+    }
+    .creators__button {
+      margin-top: 50px;
+      @include sm {
+        margin-top: 25px;
+      }
+    }
+  }
+}

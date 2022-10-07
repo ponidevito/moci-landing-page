@@ -1,0 +1,210 @@
+.header__wrapper {
+  background: linear-gradient(
+    252.91deg,
+    #e3e7f6 3.68%,
+    rgba(227, 231, 246, 0) 97.82%
+  );
+}
+
+.headerMain {
+  position: relative;
+  .headerMain__image {
+    position: absolute;
+    bottom: 0;
+    right: 0px;
+    img {
+      @media (max-width: 1100px) {
+        max-width: 700px;
+      }
+      @include lg {
+        max-width: 500px;
+      }
+      @media (max-width: 650px) {
+        max-width: 450px;
+      }
+      @media (max-width: 450px) {
+        max-width: 100%;
+      }
+    }
+
+    // products image
+    &.headerMain__image-products {
+      right: 120px;
+
+      @media (max-width: 1400px) {
+        right: 0;
+      }
+      .headerMain-img {
+        @media (max-width: 1160px) {
+          max-width: 600px;
+        }
+        @media (max-width: 1150px) {
+          max-width: 500px;
+        }
+        @include lg {
+          max-width: 450px;
+        }
+        @include xs {
+          max-width: 100%;
+        }
+      }
+    }
+    &.headerMain__image-about {
+      right: 170px;
+      @media (max-width: 1400px) {
+        right: 0;
+      }
+      img {
+        @include lg {
+          max-width: 350px;
+        }
+        @media (max-width: 370px) {
+          max-width: 100%;
+        }
+      }
+    }
+    &.headerMain__image-career {
+      img {
+        @include lg {
+          max-width: 550px;
+        }
+        @include md {
+          max-width: 450px;
+        }
+        @include xs {
+          max-width: 100%;
+        }
+      }
+    }
+    &.headerMain__image-contact {
+      right: 170px;
+      @media (max-width:1350px) {
+        right: 0;
+      }
+    }
+  }
+
+  &__body {
+    display: flex;
+  }
+
+  &__content {
+    flex: 0 0 48%;
+    padding: 129px 0px 210px 0px;
+
+    @media (max-width: 1100px) {
+      padding: 70px 0px 150px 0px;
+    }
+    @include lg {
+      padding: 20px 0px 350px 0px;
+      flex: 1 1 100%;
+    }
+    @media (max-width: 376.99px) {
+      padding: 20px 0px 290px 0px;
+    }
+    @media (max-width: 349.99px) {
+      padding: 20px 0px 270px 0px;
+    }
+
+    //products content
+    &.headerMain__content-products {
+      padding: 172px 0px 146px 0px;
+      @media (max-width: 1100px) {
+        padding: 70px 0px 150px 0px;
+      }
+      @include lg {
+        padding: 20px 0px 350px 0px;
+        flex: 1 1 100%;
+      }
+      @media (max-width: 376.99px) {
+        padding: 20px 0px 290px 0px;
+      }
+      @media (max-width: 349.99px) {
+        padding: 20px 0px 270px 0px;
+      }
+    }
+    &.headerMain__content-about {
+      padding: 190px 0px 200px 0px;
+      max-width: 333px;
+
+      @include lg {
+        max-width: 100%;
+        padding: 20px 0px 350px 0px;
+      }
+      @media (max-width: 370px) {
+        padding: 20px 0px 320px 0px;
+      }
+    }
+    &.headerMain__content-career {
+      padding: 178px 0px 228px 0px;
+      @include lg {
+        max-width: 100%;
+        padding: 20px 0px 350px 0px;
+      }
+      @include md {
+        padding: 20px 0px 310px 0px;
+      }
+      @include xs {
+        padding: 20px 0px 320px 0px;
+      }
+      @media (max-width: 349.99px) {
+        padding: 20px 0px 240px 0px;
+      }
+    }
+    &.headerMain__content-contact {
+      padding: 93px 0px 140px 0px;
+      @include lg {
+        padding: 20px 0px 290px 0px;
+      }
+      @media (max-width: 390px) {
+        padding: 20px 0px 260px 0px;
+      }
+      @media (max-width: 349.99px) {
+        padding: 20px 0px 220px 0px;
+      }
+    }
+  }
+
+  .text {
+    text-align: unset;
+    &__title {
+      font-weight: 700;
+      font-size: 48px;
+      line-height: 129%;
+      color: $primary;
+      span {
+        color: #bf0830;
+      }
+      @media (max-width: 650px) {
+        font-size: 40px;
+      }
+      &:not(:last-child) {
+        margin-bottom: 32px;
+        @media (max-width: 650px) {
+          margin-bottom: 20px;
+        }
+      }
+    }
+    &__subtitle {
+      font-size: 22px;
+      line-height: 150%;
+      color: $secondary;
+      @media (max-width: 650px) {
+        font-size: 20px;
+      }
+      &:not(:last-child) {
+        margin-bottom: 40px;
+        @media (max-width: 650px) {
+          margin-bottom: 20px;
+        }
+      }
+    }
+    &__buttons {
+      gap: 16px;
+      @include xs {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  }
+}

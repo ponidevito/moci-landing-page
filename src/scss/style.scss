@@ -1,0 +1,61 @@
+// Global SCSS-files imports
+@import "./mixins";
+@import "./vars";
+@import "./reset";
+@import "./global";
+@import "./fonts";
+
+
+
+// Sections or Pages SCSS-files imports
+@import "./header";
+@import "./headerMain";
+@import "./brands";
+@import "./line";
+@import "./creators";
+@import "./innovation";
+@import './footer';
+
+
+//page products 
+@import './future';
+
+//page about 
+@import './users';
+@import './culture';
+
+//page career
+@import './offer';
+@import './photos';
+@import './glassdoor';
+@import './work';
+
+//page contacts
+@import './contacts';
+
+
+
+// Libs
+@import './libs/swiper';
+
+html,
+body {
+  height: 100%;
+  font-family: Europa;
+  color: $primary;
+  font-size: 16px;
+  
+  
+}
+
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+}
+
+.main {
+  flex: 1 1 auto;
+}

@@ -1,0 +1,82 @@
+.section {
+  &__culture {
+    padding: 65px 0px 50px 0px;
+    background: linear-gradient(
+      268.52deg,
+      #e3e7f6 -52.27%,
+      rgba(227, 231, 246, 0) 138.23%
+    );
+    @include lg {
+      padding: 35px 0px 35px 0px;
+    }
+  }
+}
+.culture {
+  &__content {
+    padding: 0px 0px 100px 0px;
+    @include lg {
+      padding: 0px 0px 50px 0px;
+    }
+    @include md {
+      padding: 0px 0px 35px 0px;
+    }
+  }
+  &__body {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 36px;
+    @include lg {
+      gap: 20px;
+    }
+    @include md {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include sm {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  &__title {
+    font-size: 28px;
+    line-height: 111%;
+    color: #3a3a3c;
+    &:not(:last-child) {
+      margin-bottom: 32px;
+      @include lg {
+        margin-bottom: 20px;
+      }
+    }
+    @include sm {
+      text-align: center;
+    }
+  }
+
+  &__subtitle {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 169%;
+    color: $secondary;
+    @include sm {
+      line-height: 150%;
+    }
+  }
+
+  &__item {
+    padding: 65px 40px;
+    box-shadow: 0px 0px 8px rgba(22, 23, 72, 0.07),
+      0px 25px 35px rgba(22, 23, 72, 0.05);
+    border-radius: 8px;
+    height: 100%;
+    @include lg {
+      padding: 25px 15px;
+    }
+  }
+
+  .text {
+    &__title {
+      @include lg {
+        font-size: 41px;
+        line-height: 100%;
+      }
+    }
+  }
+}

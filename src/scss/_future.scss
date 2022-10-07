@@ -1,0 +1,62 @@
+.future {
+  padding: 140px 0px;
+
+  @include lg {
+    padding: 90px 0px;
+  }
+  @include md {
+    padding: 50px 0px;
+  }
+  @include sm {
+    padding: 35px 0px;
+  }
+  &.future-career {
+    padding: 112px 0px;
+    @include lg {
+      padding: 90px 0px;
+    }
+    @include md {
+      padding: 50px 0px;
+    }
+    @include sm {
+      padding: 0px 0px 35px 0px;
+    }
+  }
+  &__container {
+    max-width: 580px;
+    @include sm {
+      max-width: 100%;
+    }
+    &.future__container-career {
+      max-width: 100%;
+    }
+  }
+
+  .text {
+    &__title {
+      @include sm {
+        line-height: 110%;
+        font-size: 41px;
+      }
+    }
+
+    &__subtitle {
+      &:not(:last-child) {
+        margin-bottom: 40px;
+        @include sm {
+          line-height: 140%;
+          margin-bottom: 20px;
+        }
+      }
+    }
+
+    &__buttons {
+      justify-content: center;
+      gap: 20px;
+      @include xs {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  }
+}

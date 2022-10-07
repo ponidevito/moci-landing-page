@@ -1,0 +1,180 @@
+.section {
+  &__contacts {
+    padding: 100px 0px 195px 0px;
+    @include lg {
+      padding: 70px 0px 140px 0px;
+    }
+    @include md {
+      padding: 50px 0px 90px 0px;
+    }
+    @include sm {
+      padding: 35px 0px 35px 0px;
+    }
+  }
+}
+.contacts {
+  &__items {
+    display: flex;
+    gap: 122px;
+    @include lg {
+      gap: 50px;
+    }
+    @include md {
+      gap: 20px;
+    }
+    @include sm {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__item {
+    flex: 0 1 50%;
+    @include sm {
+      flex: 1 1 100%;
+    }
+    &.left__item {
+      padding: 40px;
+      box-shadow: 0px 0px 8px rgb(22 23 72 / 7%),
+        0px 25px 35px rgb(22 23 72 / 5%);
+      border-radius: 8px;
+      @include md {
+        padding: 20px;
+      }
+      @include sm {
+        padding: 10px;
+      }
+    }
+    &.right__item {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+  &__btn {
+    display: flex;
+
+    @include sm {
+      justify-content: center;
+    }
+    button {
+      @include xs {
+        width: 100%;
+      }
+    }
+  }
+
+  &__info {
+    p {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 150%;
+      letter-spacing: 0.005em;
+      color: #000000;
+      max-width: 273px;
+      text-align: left;
+      @include lg {
+        max-width: 100%;
+      }
+      @include sm {
+        text-align: center;
+        line-height: 130%;
+      }
+    }
+  }
+
+  .form {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+      @include md {
+        margin-bottom: 20px;
+      }
+    }
+    &__label {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 150%;
+      letter-spacing: 0.005em;
+      color: #8f90a6;
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+
+    &__input {
+      outline: none;
+      padding: 20px 32px;
+      border: 1px solid #e3e7f6;
+      border-radius: 6px;
+      &:not(:last-child) {
+        margin-bottom: 30px;
+        @include md {
+          margin-bottom: 20px;
+        }
+      }
+      @include md {
+        padding: 15px 25px;
+      }
+      @include sm {
+        padding: 10px 15px;
+      }
+      &:focus{
+        border: 1px solid #8f90a6;
+        transition: .3s ease;
+      }
+    }
+
+    &__textarea {
+      padding: 20px 32px;
+      outline: none;
+      border: 1px solid #e3e7f6;
+      border-radius: 6px;
+      min-height: 150px;
+      resize: none;
+      @include sm {
+        min-height: 70px;
+      }
+      &:focus{
+        border: 1px solid #8f90a6;
+        transition: .3s ease;
+      }
+    }
+  }
+
+  .contact {
+    &__places {
+      margin-top: 100px;
+      @include sm {
+        margin-top: 15px;
+      }
+    }
+  }
+
+  .city {
+    display: flex;
+    gap: 20px;
+    @include sm {
+      justify-content: center;
+    }
+    &__icon {
+      &:not(:last-child) {
+        margin-bottom: 30px;
+        @include sm {
+          margin-bottom: 25px;
+        }
+      }
+    }
+
+    &__name {
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 150%;
+      letter-spacing: 0.005em;
+      color: #000000;
+    }
+  }
+}

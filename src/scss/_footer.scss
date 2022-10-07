@@ -1,0 +1,128 @@
+// Footer
+.footer {
+  background: #0d123c;
+
+  &__body {
+    padding: 55px 0px 65px 0px;
+    display: flex;
+    @include md {
+      flex-wrap: wrap;
+      padding: 35px 0px 35px 0px;
+    }
+  }
+
+  &__content {
+    flex: 0 1 50%;
+    @include md {
+      flex: 1 1 100%;
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__logo {
+    margin: 0px 0px 25px 0px;
+  }
+
+  &__sublogo {
+    max-width: 287px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 169%;
+    color: #ffffff;
+    @include md {
+      max-width: unset;
+    }
+  }
+
+  &__row {
+    flex: 0 1 50%;
+    display: flex;
+    gap: 100px;
+    justify-content: flex-end;
+    @include md {
+      flex: 1 1 100%;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+  }
+
+  &__label {
+    font-size: 18px;
+    line-height: 21px;
+    color: #ffffff;
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  &__container {
+    padding: 30px 15px 38px 15px;
+    display: flex;
+    justify-content: space-between;
+    @include xs {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+
+  &__copy {
+    font-size: 16px;
+    line-height: 20px;
+    color: #ffffff;
+    @include xs {
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  &__bottom {
+    border-top: 1px solid rgba(197, 203, 226, 0.5);
+  }
+
+  .menu-footer {
+    &__item {
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+    &__link {
+      font-size: 16px;
+      line-height: 20px;
+      color: #ffffff;
+      &:hover {
+        color: #bf0830;
+        transition: 0.3s ease;
+      }
+    }
+  }
+  .social {
+    &__item {
+      &:hover {
+        transform: scale(1.1);
+        transition: 0.3s ease;
+      }
+    }
+  }
+  .terms {
+    &__link {
+      font-size: 16px;
+      line-height: 20px;
+      text-decoration-line: underline;
+      color: #ffffff;
+      &:hover {
+        color: #bf0830;
+        transition: 0.3s ease;
+      }
+    }
+  }
+}
